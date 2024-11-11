@@ -28,7 +28,7 @@ def detect_faces(frame):
     return frame
 
 def gen_frames():
-    cap = cv2.VideoCapture("video.mp4")
+    cap = cv2.VideoCapture("video.mp4") # or 0 for webcam
     while True:
         success, frame = cap.read()
         if not success:
