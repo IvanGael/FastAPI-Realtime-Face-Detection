@@ -12,5 +12,5 @@ pip install -r requirements.txt
 
 ### Run
 ````
-py app.py
+uvicorn main:app --reload
 ````
