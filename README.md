@@ -1,6 +1,6 @@
 ## Real-Time Face Detection 
 
-A simple flask web app that streams live video from a webcam and performs real-time face detection using face cascade classifier
+A simple FastAPI web app that streams live video from a webcam and performs real-time face detection using face cascade classifier
 
 
 ### Install 
