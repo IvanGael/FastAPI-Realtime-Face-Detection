@@ -23,12 +23,12 @@ def detect_faces(frame):
     # Draw rectangles around faces
     for (x, y, w, h) in faces:
         cv2.rectangle(frame, (x, y), (x+w, y+h), BOUNDING_COLOR, 2)
-        cv2.putText(frame, 'Face', (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, BOUNDING_COLOR, 1)
+        cv2.putText(frame, 'Face', (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, BOUNDING_COLOR, 2)
     
     return frame
 
 def gen_frames():
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture("video.mp4")
     while True:
         success, frame = cap.read()
         if not success:
@@ -56,3 +56,5 @@ async def video_feed():
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="127.0.0.1", port=8000)
+
+# uvicorn main:app --reload
