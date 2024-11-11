@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Face Detection</title>
+    <!-- https://tailwindcss.com/ -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0D1B2B',
+                        secondary: '#003C57',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-primary min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-6">
+            <h1 class="text-secondary text-xl font-bold text-center mb-6">Real-Time Face Detection</h1>
+            <div class="relative w-full aspect-video rounded-lg overflow-hidden">
+                <img src="/video_feed" alt="Video Feed" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
